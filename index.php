@@ -47,7 +47,8 @@ class Index{
     }
 }*/
 
-define('APP_DEBUG', 'true');
+define('APP_DEBUG', true);//程序开发的时候需要写成true，程序上线的时候改成false，改成false之后，只调用一次配置文件。
+        //但是如果是false的话，自定义的配置文件可以每次都加载，没有特殊情况最好不自定义配置文件。
 define('APP_NAME', 'App');
 define('APP_PATH', './App/');
 require_once ('./ThinkPHP/ThinkPHP.php');
