@@ -42,12 +42,16 @@ class IndexController extends Controller {
         $this->now = time();
 */
         $person = array(
-            1=>array('name'=>'Jack', 'age'=>'18'),
-            2=>array('name'=>'Tom', 'age'=>'19'),
+            1=>array('name'=>'Jack', 'age'=>'15'),
+            2=>array('name'=>'Tom', 'age'=>'16'),
             3=>array('name'=>'Peter', 'age'=>'20'),
             4=>array('name'=>'Mary', 'age'=>'21'),
         );
         $this->assign('person', $person);
+        $num = 12;
+        $this->assign(num, $num);
+    //    $name='xiaohuang';
+    //    $this->assign('name', $name);
         $this->display();
     }
     public function user(){
