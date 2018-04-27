@@ -18,9 +18,37 @@ class IndexController extends Controller {
          * 配置为3，兼容模式
          * /think/index.php?s=/Home/Index/user/id/1.html
          */
-        echo C('URL_MODEL').'<br/>';
+        //echo C('URL_MODEL').'<br/>';
         //U('模块/方法', array('id'=>1), 'xxx html htm shtml',true/false, 'localhost')
-        echo U('Index/user', array('id'=>1), 'html', false, 'localhost');
+        //echo U('Index/user', array('id'=>1), 'html', false, 'localhost');
+        //show();
+       /*
+        $arr = array(1, 2, 3, 4, 5);
+
+        dump($arr);//dump()函数，浏览器友好输出变量。
+
+        $name = 'zhangli';
+        $this->name2 = $name;
+
+        //$this->assign('变量名', 变量值);
+        $date = date('Y-M-D');
+        $this->assign('name', $name)->assign('today', $date);*/
+/*
+        $me['name'] = 'zhangli';
+        $me['age'] = '28';
+        $me['sex'] = 'boy';
+        $this->assign('me', $me);
+
+        $this->now = time();
+*/
+        $person = array(
+            1=>array('name'=>'Jack', 'age'=>'18'),
+            2=>array('name'=>'Tom', 'age'=>'19'),
+            3=>array('name'=>'Peter', 'age'=>'20'),
+            4=>array('name'=>'Mary', 'age'=>'21'),
+        );
+        $this->assign('person', $person);
+        $this->display();
     }
     public function user(){
         echo 'id is:'.$_GET['id'].'<br/>';
